@@ -116,22 +116,19 @@ public class StarWarsMain extends AppCompatActivity {
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_star_wars_main, container, false);
+            View rootView = inflater.inflate(R.layout.people_page, container, false);
             View rootView2 = inflater.inflate(R.layout.fragment_star_wars_main, container, false);
 
             switch (getArguments().getInt(ARG_SECTION_NUMBER))
             {
                 case 1:
-                    TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-                    textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
                     return rootView;
                 case 2:
                     return rootView2;
             }
 
 
-            //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+
             return rootView;
         }
     }
@@ -163,9 +160,9 @@ public class StarWarsMain extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "PEOPLE";
                 case 1:
-                    return "SECTION 2";
+                    return "PLANETS";
 
             }
             return null;
