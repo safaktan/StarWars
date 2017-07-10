@@ -122,16 +122,13 @@ public class StarWarsMain extends AppCompatActivity {
             switch (getArguments().getInt(ARG_SECTION_NUMBER))
             {
                 case 1:
-                   // TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-                    //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
                     return rootView;
                 case 2:
                     return rootView2;
             }
 
 
-            //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            //textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+
             return rootView;
         }
     }
@@ -165,10 +162,7 @@ public class StarWarsMain extends AppCompatActivity {
                 case 0:
                     return "PEOPLE";
                 case 1:
-
-                    return "PLANET";
-
-
+                    return "PLANETS";
 
             }
             return null;
