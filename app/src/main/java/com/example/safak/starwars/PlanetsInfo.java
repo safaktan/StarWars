@@ -17,6 +17,7 @@ public class PlanetsInfo {
     private String population;
     private String residents;
 
+
     public PlanetsInfo() {
     }
 
