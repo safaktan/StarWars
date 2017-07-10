@@ -35,6 +35,7 @@ public class StarWarsMain extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+    TextView text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
