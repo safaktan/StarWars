@@ -152,7 +152,7 @@ public class StarWarsMain extends AppCompatActivity {
                 case 0:
                     return "PEOPLE";
                 case 1:
-                    return "PLANETS";
+                    return "PLANET";
 
             }
             return null;
