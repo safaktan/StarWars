@@ -24,7 +24,7 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int position) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_Item, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_item, parent, false);
         ViewHolder holder = new ViewHolder(v);
         holder.nameText.setText(peopleList.get(position).getName());
 
