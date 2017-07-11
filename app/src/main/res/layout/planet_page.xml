@@ -6,4 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.safak.starwars.StarWarsMain"/>
+    tools:context="com.example.safak.starwars.StarWarsMain">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+</RelativeLayout>
