@@ -15,13 +15,8 @@ public class PlanetsInfo {
     private String terrain;
     private String surface_water;
     private String population;
-    private String residents;
 
-
-    public PlanetsInfo() {
-    }
-
-    public PlanetsInfo(String name, String rotation_period, String orbital_period, String diameter, String climate, String gravity, String terrain, String surface_water, String population, String residents) {
+    public PlanetsInfo(String name, String rotation_period, String orbital_period, String diameter, String climate, String gravity, String terrain, String surface_water, String population) {
         this.name = name;
         this.rotation_period = rotation_period;
         this.orbital_period = orbital_period;
@@ -31,7 +26,6 @@ public class PlanetsInfo {
         this.terrain = terrain;
         this.surface_water = surface_water;
         this.population = population;
-        this.residents = residents;
     }
 
     public String getName() {
@@ -104,13 +98,5 @@ public class PlanetsInfo {
 
     public void setPopulation(String population) {
         this.population = population;
-    }
-
-    public String getResidents() {
-        return residents;
-    }
-
-    public void setResidents(String residents) {
-        this.residents = residents;
     }
 }

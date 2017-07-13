@@ -9,7 +9,7 @@ import retrofit2.http.GET;
  * Created by Safak on 12.07.2017.
  */
 
-public interface RetrofitInterface {
+public interface RetrofitPeopleInterface {
 
     @GET("people/")
     Call<RequestBodyPeople> getPeople();

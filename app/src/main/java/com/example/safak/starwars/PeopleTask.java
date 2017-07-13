@@ -1,7 +1,7 @@
 package com.example.safak.starwars;
 import android.support.annotation.Nullable;
 import android.util.Log;
-import com.example.safak.starwars.api.RetrofitInterface;
+import com.example.safak.starwars.api.RetrofitPeopleInterface;
 import com.example.safak.starwars.pojos.PeopleInfoEvent;
 import com.example.safak.starwars.pojos.RequestBodyPeople;
 
@@ -15,11 +15,11 @@ import retrofit2.Response;
  * Created by Safak on 12.07.2017.
  */
 
-public class RetrofitClass {
+public class PeopleTask {
 
     public void getPeopleRequest(){
 
-    RetrofitInterface client =  ApiClient.getClient().create(RetrofitInterface.class);
+    RetrofitPeopleInterface client =  ApiClient.getClient().create(RetrofitPeopleInterface.class);
 
     Call<RequestBodyPeople> call = client.getPeople();
 
