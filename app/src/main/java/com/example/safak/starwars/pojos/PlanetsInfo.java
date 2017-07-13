@@ -1,4 +1,4 @@
-package com.example.safak.starwars;
+package com.example.safak.starwars.pojos;
 
 /**
  * Created by Koray on 10.07.2017.

@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.safak.starwars.pojos.PlanetsInfo;
+
 import java.util.List;
 
 /**
@@ -25,8 +27,6 @@ public class PlanetsAdapter extends RecyclerView.Adapter<PlanetsAdapter.ViewHold
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_item, parent, false);
         ViewHolder holder = new ViewHolder(v);
         holder.nameText.setText(planetsList.get(position).getName());
-
-
         return holder;
     }
 

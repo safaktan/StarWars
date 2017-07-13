@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +19,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+
+import com.example.safak.starwars.pojos.PeopleInfoEvent;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 public class StarWarsMain extends AppCompatActivity {
 
@@ -55,29 +61,20 @@ public class StarWarsMain extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-
     }
 
+
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_star_wars_main, menu);
-        return true;
+    protected void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(StarWarsMain.this);
     }
 
+
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    protected void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(StarWarsMain.this);
     }
 
     /**
@@ -118,10 +115,20 @@ public class StarWarsMain extends AppCompatActivity {
                     return rootView2;
             }
 
-
-
             return rootView;
         }
+
+        @Subscribe
+        public void getEvent(PeopleInfoEvent event)
+        {
+
+
+
+        }
+
+
+
+
     }
 
     /**
