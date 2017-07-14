@@ -40,7 +40,7 @@ public class PlanetsAdapter extends RecyclerView.Adapter<PlanetsAdapter.ViewHold
         return planetsList.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView nameText;
 
@@ -48,6 +48,11 @@ public class PlanetsAdapter extends RecyclerView.Adapter<PlanetsAdapter.ViewHold
 
             super(itemView);
             nameText=(TextView)itemView.findViewById(R.id.person_name);
+        }
+
+        @Override
+        public void onClick(View v) {
+
         }
     }
 }
