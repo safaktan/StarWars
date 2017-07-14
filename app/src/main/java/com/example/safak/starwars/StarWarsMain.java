@@ -2,6 +2,7 @@ package com.example.safak.starwars;
 
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -16,15 +17,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.safak.starwars.pojos.PeopleInfo;
+import com.example.safak.starwars.adapters.PeopleAdapter;
+import com.example.safak.starwars.adapters.PlanetsAdapter;
 import com.example.safak.starwars.pojos.PeopleInfoEvent;
-import com.example.safak.starwars.pojos.PlanetsInfo;
 import com.example.safak.starwars.pojos.PlanetsInfoEvent;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
-
-import java.util.List;
 
 public class StarWarsMain extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -52,6 +51,7 @@ public class StarWarsMain extends AppCompatActivity {
         public PeopleAdapter peopleAdapter;
         public RecyclerView planetsRV;
         public PlanetsAdapter planetsAdapter;
+        public CardView cardView;
 
 
         public PlaceholderFragment() {
@@ -71,6 +71,7 @@ public class StarWarsMain extends AppCompatActivity {
             View rootView2 = inflater.inflate(R.layout.planet_page, container, false);
             peopleRV = (RecyclerView) rootView.findViewById(R.id.peopleRV);
             planetsRV=(RecyclerView) rootView2.findViewById(R.id.planetsRV);
+            cardView=(CardView)rootView.findViewById(R.id.info);
             switch (getArguments().getInt(ARG_SECTION_NUMBER)) {
                 case 1:
                     PeopleTask peopleTask=new PeopleTask();

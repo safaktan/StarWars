@@ -1,10 +1,11 @@
-package com.example.safak.starwars;
+package com.example.safak.starwars.adapters;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.safak.starwars.R;
 import com.example.safak.starwars.pojos.PeopleInfo;
 
 import java.util.List;
@@ -12,8 +13,6 @@ import java.util.List;
 /**
  * Created by Safak on 11.07.2017.
  */
-
-
 public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder>  {
 
     private List<PeopleInfo> peopleList;
@@ -42,14 +41,18 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
         return peopleList.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView nameText;
-
         public ViewHolder(View itemView) {
-
             super(itemView);
             nameText=(TextView)itemView.findViewById(R.id.person_name);
+        }
+        @Override
+        public void onClick(View v) {
+
+
+
         }
     }
 }
