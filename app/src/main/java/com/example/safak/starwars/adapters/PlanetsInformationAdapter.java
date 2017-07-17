@@ -54,8 +54,8 @@ public class PlanetsInformationAdapter extends RecyclerView.Adapter<PlanetsInfor
         public ViewHolder(View itemView) {
 
             super(itemView);
-            fullNameText=(TextView)itemView.findViewById(R.id.tv_label);
-            darthVaderText=(TextView)itemView.findViewById(R.id.tv_value);
+            fullNameText=(TextView)itemView.findViewById(R.id.name_text);
+            darthVaderText=(TextView)itemView.findViewById(R.id.name_value);
         }
     }
 

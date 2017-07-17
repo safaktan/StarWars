@@ -1,5 +1,6 @@
 package com.example.safak.starwars;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
@@ -19,6 +20,7 @@ import android.view.ViewGroup;
 
 import com.example.safak.starwars.adapters.PeopleAdapter;
 import com.example.safak.starwars.adapters.PlanetsAdapter;
+import com.example.safak.starwars.pojos.PeopleInfo;
 import com.example.safak.starwars.pojos.PeopleInfoEvent;
 import com.example.safak.starwars.pojos.PlanetsInfoEvent;
 
@@ -76,7 +78,6 @@ public class StarWarsMain extends AppCompatActivity {
                 case 1:
                     PeopleTask peopleTask=new PeopleTask();
                     peopleTask.getPeopleRequest();
-
                     return rootView;
                 case 2:
                     PlanetsTask planetsTask=new PlanetsTask();

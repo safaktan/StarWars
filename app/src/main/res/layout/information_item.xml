@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
+<RelativeLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,21 +7,27 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
-        android:id="@+id/tv_label"
+        android:id="@+id/name_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="full name"/>
+        android:layout_marginLeft="35dp"
+        tools:text="FULL NAME"/>
 
     <TextView
-        android:id="@+id/tv_value"
+        android:id="@+id/name_value"
+        android:layout_below="@+id/name_text"
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="RtlHardcoded"
+        android:layout_marginLeft="35dp"
+        android:textStyle="bold"
         tools:text="Darth Vader" />
 
     <View
+        android:layout_below="@+id/name_value"
         android:layout_width="match_parent"
-        android:layout_height="1dp"/>
+        android:layout_marginTop="3dp"
+        android:layout_height="3dp"
+        android:id="@+id/view1"/>
 
-
-</LinearLayout>
+</RelativeLayout>
