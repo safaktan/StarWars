@@ -26,15 +26,17 @@ public class PeopleInformationAdapter extends RecyclerView.Adapter<PeopleInforma
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int position) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_item, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.information_item, parent, false);
         ViewHolder holder = new ViewHolder(v);
-        holder.nameText.setText(peopleInfoList.get(position).getName());
+        holder.fullNameText.setText(peopleInfoList.get(position).getName());
+        holder.darthVaderText.setText(peopleInfoList.get(position).getName());
         return holder;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.nameText.setText(peopleInfoList.get(position).getName());
+        holder.fullNameText.setText(peopleInfoList.get(position).getName());
+        holder.darthVaderText.setText(peopleInfoList.get(position).getName());
     }
 
     @Override
@@ -44,12 +46,15 @@ public class PeopleInformationAdapter extends RecyclerView.Adapter<PeopleInforma
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView nameText;
+        TextView fullNameText;
+        TextView darthVaderText;
+
 
         public ViewHolder(View itemView) {
 
             super(itemView);
-            nameText=(TextView)itemView.findViewById(R.id.person_name);
+            fullNameText=(TextView)itemView.findViewById(R.id.tv_label);
+            darthVaderText=(TextView)itemView.findViewById(R.id.tv_value);
         }
     }
 

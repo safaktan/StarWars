@@ -52,7 +52,6 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
         public void onClick(View v) {
 
 
-
         }
     }
 }
