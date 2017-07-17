@@ -9,39 +9,40 @@ import android.widget.TextView;
 
 import com.example.safak.starwars.R;
 import com.example.safak.starwars.pojos.PeopleInfo;
+import com.example.safak.starwars.pojos.PlanetsInfo;
 
 import java.util.List;
 
 /**
- * Created by Safak on 14.07.2017.
+ * Created by Koray on 14.07.2017.
  */
 
-public class PeopleInformationAdapter extends RecyclerView.Adapter<PeopleInformationAdapter.ViewHolder> {
+public class PlanetsInformationAdapter extends RecyclerView.Adapter<PlanetsInformationAdapter.ViewHolder> {
 
-    private List<PeopleInfo> peopleInfoList;
+    private List<PlanetsInfo> planetsInfoList;
 
-    public PeopleInformationAdapter(List<PeopleInfo> peopleInfoList) {
-        this.peopleInfoList = peopleInfoList;
+    public PlanetsInformationAdapter(List<PlanetsInfo> planetsInfoList) {
+        this.planetsInfoList = planetsInfoList;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int position) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.information_item, parent, false);
         ViewHolder holder = new ViewHolder(v);
-        holder.fullNameText.setText(peopleInfoList.get(position).getName());
-        holder.darthVaderText.setText(peopleInfoList.get(position).getName());
+        holder.fullNameText.setText(planetsInfoList.get(position).getName());
+        holder.darthVaderText.setText(planetsInfoList.get(position).getName());
         return holder;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.fullNameText.setText(peopleInfoList.get(position).getName());
-        holder.darthVaderText.setText(peopleInfoList.get(position).getName());
+        holder.fullNameText.setText(planetsInfoList.get(position).getName());
+        holder.darthVaderText.setText(planetsInfoList.get(position).getName());
     }
 
     @Override
     public int getItemCount() {
-        return peopleInfoList.size();
+        return planetsInfoList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
