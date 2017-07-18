@@ -10,7 +10,10 @@ import android.widget.TextView;
 import com.example.safak.starwars.R;
 import com.example.safak.starwars.pojos.PeopleInfo;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by Safak on 14.07.2017.
@@ -18,18 +21,33 @@ import java.util.List;
 
 public class PeopleInformationAdapter extends RecyclerView.Adapter<PeopleInformationAdapter.ViewHolder> {
 
-    private List<PeopleInfo> peopleInfoList;
+    HashMap<String,String> map;
+    String[] keyArray;
+    String[] valueArray;
+    int i=0;
 
-    public PeopleInformationAdapter(List<PeopleInfo> peopleInfoList) {
-        this.peopleInfoList = peopleInfoList;
+
+    public PeopleInformationAdapter(HashMap<String, String> map) {
+        this.map = map;
+        for (Map.Entry<String, String> entry : map.entrySet()){
+            String key = entry.getKey();
+            String value = entry.getValue();
+
+            keyArray[i]=key;
+            valueArray[i]=value;
+            i++;
+        }
+
+
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int position) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.information_item, parent, false);
         ViewHolder holder = new ViewHolder(v);
-        holder.fullNameText.setText(peopleInfoList.get(position).getName());
-        holder.darthVaderText.setText(peopleInfoList.get(position).getName());
+
+        holder.fullNameText.setText(keyArray.get(position).getName());
+        holder.darthVaderText.setText(valueArray.get(position).getName());
         return holder;
     }
 

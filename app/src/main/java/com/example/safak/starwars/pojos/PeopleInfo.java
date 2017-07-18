@@ -5,14 +5,14 @@ package com.example.safak.starwars.pojos;
  */
 
 public class PeopleInfo {
-    private String name;
-    private String height;
-    private String mass;
-    private String hair_color;
-    private String skin_color;
-    private String eye_color;
-    private String birth_year;
-    private String gender;
+    public String name;
+    public String height;
+    public String mass;
+    public String hair_color;
+    public String skin_color;
+    public String eye_color;
+    public String birth_year;
+    public String gender;
 
     public PeopleInfo() {
     }

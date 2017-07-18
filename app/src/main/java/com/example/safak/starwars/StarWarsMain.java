@@ -1,5 +1,6 @@
 package com.example.safak.starwars;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.safak.starwars.adapters.PeopleAdapter;
+import com.example.safak.starwars.adapters.PeopleInformationAdapter;
 import com.example.safak.starwars.adapters.PlanetsAdapter;
 import com.example.safak.starwars.pojos.PeopleInfo;
 import com.example.safak.starwars.pojos.PeopleInfoEvent;
@@ -27,13 +29,23 @@ import com.example.safak.starwars.pojos.PlanetsInfoEvent;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
+import java.util.HashMap;
+import java.util.List;
+
 public class StarWarsMain extends AppCompatActivity {
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private ViewPager mViewPager;
 
+ /*   public PeopleInformationAdapter peopleInformationAdapter;
+    public List<PeopleInfo> peopleInfoList;
+    public RecyclerView informationRV;
+    PeopleInfo peopleInfo=new PeopleInfo();*/
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_star_wars_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -43,6 +55,20 @@ public class StarWarsMain extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
+       /* informationRV=(RecyclerView)findViewById(R.id.infoRV);
+        peopleInformationAdapter=new PeopleInformationAdapter(peopleInfoList);
+        informationRV.setLayoutManager(new LinearLayoutManager(get));
+        informationRV.setAdapter(peopleInformationAdapter);
+
+        HashMap<String,String> map=new HashMap<>();
+        map.put("name",peopleInfo.name);
+        map.put("height",peopleInfo.height);
+        map.put("mass",peopleInfo.mass);
+        map.put("hair_color",peopleInfo.hair_color);
+        map.put("skin_color",peopleInfo.skin_color);
+        map.put("eye_color",peopleInfo.eye_color);
+        map.put("birth_year",peopleInfo.birth_year);
+        map.put("gender",peopleInfo.gender);*/
     }
 
 
@@ -78,6 +104,7 @@ public class StarWarsMain extends AppCompatActivity {
                 case 1:
                     PeopleTask peopleTask=new PeopleTask();
                     peopleTask.getPeopleRequest();
+
                     return rootView;
                 case 2:
                     PlanetsTask planetsTask=new PlanetsTask();
