@@ -37,8 +37,6 @@ public class PeopleInformationAdapter extends RecyclerView.Adapter<PeopleInforma
             valueArray[i]=value;
             i++;
         }
-
-
     }
 
     @Override
@@ -46,20 +44,20 @@ public class PeopleInformationAdapter extends RecyclerView.Adapter<PeopleInforma
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.information_item, parent, false);
         ViewHolder holder = new ViewHolder(v);
 
-        holder.fullNameText.setText(keyArray.get(position).getName());
-        holder.darthVaderText.setText(valueArray.get(position).getName());
+        holder.fullNameText.setText(keyArray[position]);
+        holder.darthVaderText.setText(valueArray[position]);
         return holder;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.fullNameText.setText(peopleInfoList.get(position).getName());
-        holder.darthVaderText.setText(peopleInfoList.get(position).getName());
+        holder.fullNameText.setText(keyArray[position]);
+        holder.darthVaderText.setText(valueArray[position]);
     }
 
     @Override
     public int getItemCount() {
-        return peopleInfoList.size();
+        return valueArray.length;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

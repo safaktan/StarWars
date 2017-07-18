@@ -50,6 +50,8 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
         }
         @Override
         public void onClick(View v) {
+            //bundle for hangisine tıkladını
+
 
 
         }

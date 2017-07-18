@@ -32,13 +32,13 @@ public class PeopleInformationPage extends AppCompatActivity {
 
 
         map.put("FULL NAME",peopleInfo.name);
-        map.put("",peopleInfo.height);
-        map.put("mass",peopleInfo.mass);
-        map.put("hair_color",peopleInfo.hair_color);
-        map.put("skin_color",peopleInfo.skin_color);
-        map.put("eye_color",peopleInfo.eye_color);
-        map.put("birth_year",peopleInfo.birth_year);
-        map.put("gender",peopleInfo.gender);
+        map.put("HEIGHT",peopleInfo.height);
+        map.put("MASS",peopleInfo.mass);
+        map.put("HAIR COLOR",peopleInfo.hair_color);
+        map.put("SKIN COLOR",peopleInfo.skin_color);
+        map.put("EYE COLOR",peopleInfo.eye_color);
+        map.put("BIRTHDAY",peopleInfo.birth_year);
+        map.put("GENDER",peopleInfo.gender);
 
 
     }
